@@ -1,7 +1,9 @@
 ﻿using System.Data.Common;
+using System.Data.Entity;
 using Abp.Zero.EntityFramework;
 using ScotchMe.Authorization.Roles;
 using ScotchMe.Authorization.Users;
+using ScotchMe.Entities;
 using ScotchMe.MultiTenancy;
 
 namespace ScotchMe.EntityFramework
@@ -9,6 +11,11 @@ namespace ScotchMe.EntityFramework
     public class ScotchMeDbContext : AbpZeroDbContext<Tenant, Role, User>
     {
         //TODO: Define an IDbSet for your Entities...
+        public IDbSet<Scotch> Scotches { get; set; }
+
+        public IDbSet<ScotchRatingSource> ScotchRatingSources { get; set; }
+
+        public IDbSet<ScotchRating> ScotchRatings { get; set; }
 
         /* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.
@@ -18,7 +25,7 @@ namespace ScotchMe.EntityFramework
         public ScotchMeDbContext()
             : base("Default")
         {
-
+            
         }
 
         /* NOTE:

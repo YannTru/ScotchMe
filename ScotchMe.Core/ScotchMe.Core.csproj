@@ -179,6 +179,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Scotch.cs" />
+    <Compile Include="Entities\ScotchRating.cs" />
+    <Compile Include="Entities\ScotchRatingSource.cs" />
     <Compile Include="ScotchMeConsts.cs" />
     <Compile Include="ScotchMeCoreModule.cs" />
     <Compile Include="AppVersionHelper.cs" />

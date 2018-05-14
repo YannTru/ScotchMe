@@ -10,7 +10,7 @@ namespace ScotchMe.EntityFramework.Repositories
         protected ScotchMeRepositoryBase(IDbContextProvider<ScotchMeDbContext> dbContextProvider)
             : base(dbContextProvider)
         {
-
+            
         }
 
         //add common methods for all repositories
